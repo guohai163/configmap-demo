@@ -1,0 +1,15 @@
+spring:
+  cloud:
+    kubernetes:
+      enabled: true
+      reload:
+        enabled: true
+        mode: event
+      #        period: 10000
+      config:
+        sources:
+          - name: configmap-demo
+      secrets:
+        enable-api: true
+        sources:
+          - name: default-secret
