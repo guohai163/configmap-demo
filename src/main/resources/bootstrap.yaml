@@ -4,8 +4,8 @@ spring:
       enabled: true
       reload:
         enabled: true
-        mode: event
-      #        period: 10000
+        mode: polling
+        period: 30000
       config:
         sources:
           - name: configmap-demo
