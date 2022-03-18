@@ -1,0 +1,22 @@
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: configmap-demo
+spec:
+  selector:
+    matchLabels:
+      app: configmap-demo
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: configmap-demo
+    spec:
+      nodeSelector:
+        nodetype: work
+      containers:
+        - name: configmap-demo
+          image: gyyx/config-map:1.0
+          ports:
+            - containerPort: 8081
