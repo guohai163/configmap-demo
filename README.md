@@ -66,7 +66,7 @@ $ sudo ktctl connect
 server:
   port: 8081
 setings:
-  mysql-psss: ${changedb-url}
+  psss: ${mysql-pass}
   min: 10
 ~~~
 合成后文件
@@ -81,8 +81,8 @@ data:
     server:
       port: 8081
     setings:
-      mysql-psss: ${changedb-url}
-      min-num: 109
+      psss: ${mysql-pass}
+      min: 10
 ~~~
 
 ~~~ shell

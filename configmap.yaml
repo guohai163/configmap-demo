@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: configmap-demo # 指定生成后的configmap名字
+data:
+  application.yaml: | # 后接文件内容，注意缩进
+    server:
+      port: 8081
+    setings:
+      psss: ${mysql-pass}
+      min: 10
